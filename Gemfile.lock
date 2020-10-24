@@ -18,6 +18,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    childprocess (3.0.0)
     concurrent-ruby (1.1.7)
     cucumber (5.2.0)
       builder (~> 3.2, >= 3.2.4)
@@ -71,6 +72,10 @@ GEM
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     regexp_parser (1.8.2)
+    rubyzip (2.3.0)
+    selenium-webdriver (3.142.7)
+      childprocess (>= 0.5, < 4.0)
+      rubyzip (>= 1.2.2)
     sys-uname (1.2.1)
       ffi (>= 1.0.0)
     thor (1.0.1)
@@ -87,6 +92,7 @@ PLATFORMS
 DEPENDENCIES
   capybara (= 3.33)
   cucumber (= 5.2)
+  selenium-webdriver (= 3.142.7)
 
 BUNDLED WITH
    2.1.4
