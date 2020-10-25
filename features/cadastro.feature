@@ -10,26 +10,38 @@ Cenario: Cadastro
     Dado que acesso a página de cadastro
     Quando submeto o meu cadastro com:
         |email|paulo123@gmail.com|
-        |senha|senha123|
-        |senha_confirma|senha123|
+        |senha|senha123          |
+        |senha_confirma|senha123 |
     Então devo ser redirecionado para a área logada
 
 Cenario: Email não informado
     Dado que acesso a página de cadastro
-    Quando submeto o meu cadastro sem o email
-    Então devo ver Oops! Informe seu email
+    Quando submeto o meu cadastro com:
+        |email|                  |
+        |senha|senha123          |
+        |senha_confirma|senha123 |
+    Então devo ver a mensagem: "Oops! Informe seu email."
 
 Cenario: Senha não informada
     Dado que acesso a página de cadastro
-    Quando submeto o meu cadastro sem a senha
-    Então devo ver Oops! Informe sua senha
+    Quando submeto o meu cadastro com:
+        |email|paulo123@gmail.com|
+        |senha|                  |
+        |senha_confirma|         |
+    Então devo ver a mensagem: "Oops! Informe sua senha."
 
 Cenario: Senha divergente
     Dado que acesso a página de cadastro
-    Quando submeto meu cadastro com senha divergente
-    Então devo ver Opps! Senhas não são iguais
+    Quando submeto o meu cadastro com:
+        |email|paulo123@gmail.com|
+        |senha|senha123          |
+        |senha_confirma|senha456 |
+    Então devo ver a mensagem: "Oops! Senhas não são iguais."
 
 Cenario: Nenhum campo preenchido
     Dado que acesso a página de cadastro
-    Quando submeto meu cadastro sem preencher os campos
-    Então devo ver Opps! Informe seu email e sua senha
+    Quando submeto o meu cadastro com:
+        |email|                  |
+        |senha|                  |
+        |senha_confirma|         |
+    Então devo ver a mensagem: "Oops! Informe seu email e sua senha."
