@@ -3,8 +3,10 @@ require "capybara"
 require "capybara/cucumber"
 
 require_relative "helpers"
+require_relative "actions"
 
 World(Helpers)
+World(Actions)
 
 Capybara.configure do |config|
     config.default_driver = :selenium_chrome
