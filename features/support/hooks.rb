@@ -1,6 +1,6 @@
-# Before do
-#     log "Tudo aqui ocorre antes do cenário"
-# end
+Before do
+    page.current_window.resize_to(1440, 900)
+end
 
 After do
     shot = page.save_screenshot("logs/temp_shot.png")
