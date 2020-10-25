@@ -5,10 +5,11 @@ Funcionalidade: Login
     Quero acessar o sistema com meu email e senha
     Para que eu possa ter acesso as playlists do Parodify
 
+    @smoke
     Cenario: Login do usuário
 
         Dado que acesso a página login
-        Quando submeto minhas credenciais com: "paulo123@gmail.com" e "senha123"
+        Quando submeto minhas credenciais com: "pauloedusandim@gmail.com" e "dani1991"
         Então devo ser redirecionado para a área logada
 
     Esquema do Cenário: Tentativa de Login
