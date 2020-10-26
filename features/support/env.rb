@@ -14,6 +14,7 @@ Capybara.configure do |config|
     config.app_host = "http://parodify.qaninja.com.br"
 end
 
+# Comando para executar: allure serve logs
 AllureCucumber.configure do |config|
     config.results_directory = "/logs"
     config.clean_results_directory = true
